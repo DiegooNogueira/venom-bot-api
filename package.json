@@ -5,17 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "bash postbuild.bash"
+    "heroku-postbuild": "bash postbuild.bash",
+    "build": "node node_modules/puppeteer/install.js && mkdir -p ./.cache && mv /app/.cache/puppeteer ./.cache"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "venom-bot": "^3.0.20"
+    "venom-bot": "^5.3.0"
   },
   "engines": {
     "node": "18.18.0",
     "npm": "9.8.1"
-}
+  }
 }
