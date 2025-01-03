@@ -1,6 +1,7 @@
 // index.js
 const express = require("express");
 const venom = require("venom-bot");
+const venomOptions = require("./venomOptions.js");
 
 const app = express();
 const PORT = 3000;
@@ -11,7 +12,7 @@ let client;
 
 // Inicializa o Venom Bot
 venom
-  .create()
+  .create({ session: "tokens", ...venomOptions })
   .then((clientInstance) => {
     client = clientInstance;
     console.log("Venom Bot está pronto!");
