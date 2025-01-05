@@ -1,5 +1,8 @@
 module.exports = {
   autoClose: 0,
+  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
+    ? process.env.PUPPETEER_EXECUTABLE_PATH
+    : false,
   browserArgs: [
     "--disable-web-security",
     "--no-sandbox",
