@@ -4,7 +4,7 @@ const venom = require("venom-bot");
 const venomOptions = require("./venomOptions.js");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
